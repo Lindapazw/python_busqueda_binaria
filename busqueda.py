@@ -19,4 +19,7 @@ def busqueda_binaria(lista, objetivo, limite_inferior=None, limite_superior=None
     if limite_superior is None:
         limite_superior = len(lista)-1 # fin de la lista 
 
-    
+    if limite_superior < limite_inferior:
+        return -1
+
+    punto_medio = (limite_inferior + limite_superior) // 2 
