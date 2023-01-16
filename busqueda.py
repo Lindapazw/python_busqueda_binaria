@@ -35,3 +35,7 @@ def busqueda_binaria(lista, objetivo, limite_inferior=None, limite_superior=None
         return busqueda_binaria(lista, objetivo, limite_inferior, punto_medio-1)
     else:
         return busqueda_binaria(lista, objetivo, punto_medio+1, limite_superior )
+
+    if __name__=='__main__':
+    miLista = [1,3,5,10,12]
+    print(busqueda_binaria(miLista, 12 ))
