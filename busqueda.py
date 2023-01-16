@@ -23,3 +23,15 @@ def busqueda_binaria(lista, objetivo, limite_inferior=None, limite_superior=None
         return -1
 
     punto_medio = (limite_inferior + limite_superior) // 2 
+
+    # [12,22,35,43,55,63]
+    #  1   2  3  4  5  6
+    # punto medio = (0 + 6) // 2 
+    #  6 // 2 = 3  
+
+    if lista[punto_medio] == objetivo: 
+        return punto_medio 
+    elif objetivo < lista [punto_medio]:
+        return busqueda_binaria(lista, objetivo, limite_inferior, punto_medio-1)
+    else:
+        return busqueda_binaria(lista, objetivo, punto_medio+1, limite_superior )
